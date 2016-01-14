@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="skill_names">
+        <item>Overall</item>
+        <item>Attack</item>
+        <item>Defence</item>
+        <item>Strength</item>
+        <item>Constitution</item>
+        <item>Ranged</item>
+        <item>Prayer</item>
+        <item>Magic</item>
+        <item>Cooking</item>
+        <item>Woodcutting</item>
+        <item>Fletching</item>
+        <item>Fishing</item>
+        <item>Firemaking</item>
+        <item>Crafting</item>
+        <item>Smithing</item>
+        <item>Mining</item>
+        <item>Herblore</item>
+        <item>Agility</item>
+        <item>Thieving</item>
+        <item>Slayer</item>
+        <item>Farming</item>
+        <item>Runecrafting</item>
+        <item>Hunter</item>
+        <item>Construction</item>
+        <item>Summoning</item>
+        <item>Dungeoneering</item>
+        <item>Divination</item>
+    </string-array>
+    <array name="skill_icons">
+        <item>@drawable/overallicon</item>
+        <item>@drawable/attackicon</item>
+        <item>@drawable/defenceicon</item>
+        <item>@drawable/strengthicon</item>
+        <item>@drawable/constitutionicon</item>
+        <item>@drawable/rangedicon</item>
+        <item>@drawable/prayericon</item>
+        <item>@drawable/magicicon</item>
+        <item>@drawable/cookingicon</item>
+        <item>@drawable/woodcuttingicon</item>
+        <item>@drawable/fletchingicon</item>
+        <item>@drawable/fishingicon</item>
+        <item>@drawable/firemakingicon</item>
+        <item>@drawable/craftingicon</item>
+        <item>@drawable/smithingicon</item>
+        <item>@drawable/miningicon</item>
+        <item>@drawable/herbloreicon</item>
+        <item>@drawable/agilityicon</item>
+        <item>@drawable/thievingicon</item>
+        <item>@drawable/slayericon</item>
+        <item>@drawable/farmingicon</item>
+        <item>@drawable/runecraftingicon</item>
+        <item>@drawable/huntericon</item>
+        <item>@drawable/constructionicon</item>
+        <item>@drawable/summoningicon</item>
+        <item>@drawable/dungeoneeringicon</item>
+        <item>@drawable/divinationicon</item>
+    </array>
+</resources>
