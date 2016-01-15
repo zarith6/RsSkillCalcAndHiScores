@@ -6,8 +6,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,6 +24,49 @@ public class StatsListViewActivity extends ListActivity {
     RSChar tempCharacter;
     TextView characterNameHeader;
     ListView list;
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.skilllistview_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu)
+    {
+        try{
+            for(int i = 0; i < menu.size();i++)
+            {
+                MenuItem mi = menu.getItem(i);
+                String title = mi.getTitle().toString();
+                Spannable spannable = new SpannableString(title);
+                spannable.setSpan(new ForegroundColorSpan(Color.WHITE),0,spannable.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                mi.setTitle(spannable);
+            }
+        }catch(Exception ex){}
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        else if(id == R.id.action_skillcalc){
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

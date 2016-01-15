@@ -92,5 +92,5 @@ public class MainActivity extends Activity {
         } catch(Exception ex){Toast t = Toast.makeText(this,ex.getMessage(),Toast.LENGTH_SHORT); t.show();}
 
     }
-    
+
 }
