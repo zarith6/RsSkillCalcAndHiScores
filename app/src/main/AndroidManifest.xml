@@ -23,7 +23,11 @@
         <activity
             android:name=".StatsListViewActivity"
             android:label="@string/title_activity_stats_list_view"
-            android:theme="@style/MyTheme"></activity>
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".Skill_Calc"
+            android:label="@string/title_activity_skill_calc"
+            android:theme="@style/MyTheme" />
     </application>
 
 </manifest>

@@ -26,6 +26,7 @@ public class StatsListViewActivity extends ListActivity {
     ListView list;
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -61,7 +62,10 @@ public class StatsListViewActivity extends ListActivity {
             return true;
         }
         else if(id == R.id.action_skillcalc){
-
+            RSChar chara = tempCharacter;
+            Intent intent = new Intent(this,Skill_Calc.class);
+            intent.putExtra("RSCharacter",chara);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

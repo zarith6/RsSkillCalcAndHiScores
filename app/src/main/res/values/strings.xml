@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
     <string name="skill_calc">Skill Calculator</string>
     <string name="title_activity_stats_list_view">HiScores</string>
+    <string name="title_activity_skill_calc">Skill Calculator</string>
 </resources>
