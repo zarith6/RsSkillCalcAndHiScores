@@ -36,6 +36,28 @@
         android:layout_height="wrap_content"
         android:id="@+id/selectedSkillLevel"
         android:textColor="@color/white" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/desiredSkillXp"
+        android:hint="Enter desired Level here."
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/requiredXpForLevel"
+        android:textColor="@color/white" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:id="@+id/submitXpButton"
+        android:onClick="submitXpButtonClicked"/>
+
+
 
 
 </LinearLayout>
