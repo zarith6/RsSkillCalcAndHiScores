@@ -100,6 +100,7 @@ public class RsExpXMLParser
     {
         parser.require(XmlPullParser.START_TAG, ns, "XpAmt");
         int XpAmt = readInt(parser);
+        parser.nextTag();
         parser.require(XmlPullParser.END_TAG, ns, "XpAmt");
         return XpAmt;
     }
@@ -116,6 +117,7 @@ public class RsExpXMLParser
     {
         parser.require(XmlPullParser.START_TAG, ns, "LvlReq");
         int LvlReq = readInt(parser);
+        parser.nextTag();
         parser.require(XmlPullParser.END_TAG,ns,"LvlReq");
         return LvlReq;
     }
