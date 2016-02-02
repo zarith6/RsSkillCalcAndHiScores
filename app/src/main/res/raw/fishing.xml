@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillItem>
+<item>
+	<name>Catch Shrimp</name>
+	<XpAmt>10</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>1</LvlReq>
+</item>
+<item>
+	<name>Catch Crayfish</name>
+	<XpAmt>10</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>1</LvlReq>
+</item>
+<item>
+    <name>Catch Karambwanji</name>
+    <XpAmt>5</XpAmt>
+    <Category>p2p</Category>
+    <LvlReq>5</LvlReq>
+</item>
+<item>
+	<name>Catch Sardine</name>
+	<XpAmt>20</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>5</LvlReq>
+</item>
+<item>
+	<name>Catch Herring</name>
+	<XpAmt>30</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>10</LvlReq>
+</item>
+<item>
+	<name>Catch Anchovy</name>
+	<XpAmt>40</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>15</LvlReq>
+</item>
+<item>
+    <name>Catch Mackerel</name>
+    <XpAmt>20</XpAmt>
+    <Category>p2p</Category>
+    <LvlReq>16</LvlReq>
+</item>
+<item>
+	<name>Catch Trout</name>
+	<XpAmt>50</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>20</LvlReq>
+</item>
+    <item>
+        <name>Catch Cod</name>
+        <XpAmt>45</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>23</LvlReq>
+    </item>
+<item>
+	<name>Catch Pike</name>
+	<XpAmt>60</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>25</LvlReq>
+</item>
+    <item>
+        <name>Catch Slimey Eel</name>
+        <XpAmt>65</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>28</LvlReq>
+    </item>
+<item>
+	<name>Catch Salmon</name>
+	<XpAmt>70</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>30</LvlReq>
+</item>
+    <item>
+        <name>Catch Frog Spawn</name>
+        <XpAmt>75</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>33</LvlReq>
+    </item>
+<item>
+	<name>Catch Tuna</name>
+	<XpAmt>80</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>35</LvlReq>
+</item>
+    <item>
+        <name>Catch Rainbow Fish</name>
+        <XpAmt>80</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>38</LvlReq>
+    </item>
+<item>
+	<name>Catch Lobster</name>
+	<XpAmt>90</XpAmt>
+	<Category>f2p</Category>
+	<LvlReq>40</LvlReq>
+</item>
+    <item>
+        <name>Catch Bass</name>
+        <XpAmt>100</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>46</LvlReq>
+    </item>
+    <item>
+        <name>Catch Leaping Trout</name>
+        <XpAmt>50</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>48</LvlReq>
+    </item>
+<item>
+	<name>Catch Swordfish</name>
+	<XpAmt>100</XpAmt>
+	<Categorys>f2p</Categorys>
+	<LvlReq>50</LvlReq>
+</item>
+    <item>
+        <name>Catch Lava Eel</name>
+        <XpAmt>60</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>53</LvlReq>
+    </item>
+    <item>
+        <name>Catch Tuna(Barb)</name>
+        <XpAmt>80</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>55</LvlReq>
+    </item>
+    <item>
+        <name>Catch Leaping Salmon</name>
+        <XpAmt>70</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>58</LvlReq>
+    </item>
+    <item>
+        <name>Catch Monkfish</name>
+        <XpAmt>120</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>60</LvlReq>
+    </item>
+    <item>
+        <name>Catch Karambwan</name>
+        <XpAmt>105</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>65</LvlReq>
+    </item>
+    <item>
+        <name>Catch Swordfish(w/ Gloves)</name>
+        <XpAmt>200</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>65</LvlReq>
+    </item>
+    <item>
+        <name>Catch Leaping Sturgeon</name>
+        <XpAmt>80</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>70</LvlReq>
+    </item>
+    <item>
+        <name>Catch Swordfish(Barb)</name>
+        <XpAmt>100</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>70</LvlReq>
+    </item>
+    <item>
+        <name>Catch Shark</name>
+        <XpAmt>110</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>76</LvlReq>
+    </item>
+    <item>
+        <name>Catch Great White Shark</name>
+        <XpAmt>130</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>80</LvlReq>
+    </item>
+    <item>
+        <name>Catch Monkfish(w/ Gloves)</name>
+        <XpAmt>220</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>80</LvlReq>
+    </item>
+    <item>
+        <name>Catch Cavefish</name>
+        <XpAmt>300</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>85</LvlReq>
+    </item>
+    <item>
+        <name>Catch Shark(w/Gloves)</name>
+        <XpAmt>210</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>90</LvlReq>
+    </item>
+    <item>
+        <name>Catch Rocktail</name>
+        <XpAmt>380</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>90</LvlReq>
+    </item>
+    <item>
+        <name>Cavefish(w/Gloves)</name>
+        <XpAmt>450</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>92</LvlReq>
+    </item>
+    <item>
+        <name>Catch Shark(Barb)</name>
+        <XpAmt>110</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>96</LvlReq>
+    </item>
+    <item>
+        <name>Catch Great White Shark(Barb)</name>
+        <XpAmt>130</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>96</LvlReq>
+    </item>
+    <item>
+        <name>Catch Rocktail(w/Gloves)</name>
+        <XpAmt>530</XpAmt>
+        <Category>p2p</Category>
+        <LvlReq>96</LvlReq>
+    </item>
+    <item>
+    <name>Cracked Urn</name>
+    <XpAmt>900</XpAmt>
+    <Category>urn</Category>
+    <LvlReq>1</LvlReq>
+</item>
+    <item>
+        <name>Fragile Urn</name>
+        <XpAmt>2100</XpAmt>
+        <Category>urn</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Normal Urn</name>
+        <XpAmt>3000</XpAmt>
+        <Category>urn</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Strong Urn</name>
+        <XpAmt>3600</XpAmt>
+        <Category>urn</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Decorated Urn</name>
+        <XpAmt>11400</XpAmt>
+        <Category>urn</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Heim Crab</name>
+        <XpAmt>9</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Red-Eye</name>
+        <XpAmt>27</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>10</LvlReq>
+    </item>
+    <item>
+        <name>Dusk Eel</name>
+        <XpAmt>45</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>20</LvlReq>
+    </item>
+    <item>
+        <name>Giant Flatfish</name>
+        <XpAmt>63</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>30</LvlReq>
+    </item>
+    <item>
+        <name>Short-Finned Eel</name>
+        <XpAmt>81</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>40</LvlReq>
+    </item>
+    <item>
+        <name>Web Snipper</name>
+        <XpAmt>99</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>50</LvlReq>
+    </item>
+    <item>
+        <name>Bouldabass</name>
+        <XpAmt>117</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>60</LvlReq>
+    </item>
+    <item>
+        <name>Salve Eel</name>
+        <XpAmt>135</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>70</LvlReq>
+    </item>
+    <item>
+        <name>Blue Crab</name>
+        <XpAmt>153</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>80</LvlReq>
+    </item>
+    <item>
+        <name>Cave Moray</name>
+        <XpAmt>171</XpAmt>
+        <Category>dung</Category>
+        <LvlReq>90</LvlReq>
+    </item>
+</SkillItem>

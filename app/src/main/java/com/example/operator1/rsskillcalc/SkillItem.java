@@ -6,15 +6,16 @@ package com.example.operator1.rsskillcalc;
 public class SkillItem
 {
         public String name;
-        public int XpAmt;
-        public boolean IsMembers;
+        public float XpAmt;
+        //public boolean IsMembers;
+        public String category;
         public int LvlReq;
 
-    public SkillItem(String itemName, int xpAmt, boolean isMembers, int lvlReq)
+    public SkillItem(String itemName, float xpAmt, String category, int lvlReq)
     {
         this.name = itemName;
         this.XpAmt = xpAmt;
-        this.IsMembers = isMembers;
+        this.category = category;
         this.LvlReq = lvlReq;
     }
 

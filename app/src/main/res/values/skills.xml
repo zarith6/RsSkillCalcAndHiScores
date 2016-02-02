@@ -29,6 +29,46 @@
         <item>Dungeoneering</item>
         <item>Divination</item>
     </string-array>
+    <array name="skills_for_spinner">
+        <item>Select Skill</item>
+        <item>Prayer</item>
+        <item>Magic</item>
+        <item>Cooking</item>
+        <item>Woodcutting</item>
+        <item>Fletching</item>
+        <item>Fishing</item>
+        <item>Firemaking</item>
+        <item>Crafting</item>
+        <item>Smithing</item>
+        <item>Mining</item>
+        <item>Herblore</item>
+        <item>Agility</item>
+        <item>Thieving</item>
+        <item>Farming</item>
+        <item>Runecrafting</item>
+        <item>Hunter</item>
+        <item>Construction</item>
+        <item>Summoning</item>
+        <item>Divination</item>
+    </array>
+    <array name="Prayer">
+        <item>F2P</item>
+        <item>P2P</item>
+        <item>Gilded Altar</item>
+        <item>Ectofuntus</item>
+    </array>
+    <array name="Fishing">
+        <item>F2P</item>
+        <item>P2P</item>
+        <item>Fishing Urns</item>
+        <item>Dungeoneering</item>
+    </array>
+    <array name="Cooking">
+        <item>F2P</item>
+        <item>P2P</item>
+        <item>Cooking Urns</item>
+        <item>Dungeoneering</item>
+    </array>
     <array name="skill_icons">
         <item>@drawable/overallicon</item>
         <item>@drawable/attackicon</item>

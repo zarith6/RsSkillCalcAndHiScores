@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkillItem>
+    <item>
+        <name>Impious Ashes</name>
+        <XpAmt>4</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Bones</name>
+        <XpAmt>4.5</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Burnt Bones</name>
+        <XpAmt>4.5</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Monkey Bones</name>
+        <XpAmt>5</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Accursed Ashes</name>
+        <XpAmt>12.5</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Big Bones</name>
+        <XpAmt>15</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Impious Urn</name>
+        <XpAmt>120</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Accursed Urn</name>
+        <XpAmt>375</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Bones (Cremate)</name>
+        <XpAmt>11.2</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Burnt Bones (Cremate)</name>
+        <XpAmt>11.2</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Monkey Bones (Cremate)</name>
+        <XpAmt>12.5</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Big Bones (Cremate)</name>
+        <XpAmt>37.5</XpAmt>
+        <Category>f2p</Category>
+        <LvlReq>1</LvlReq>
+    </item>
+</SkillItem>

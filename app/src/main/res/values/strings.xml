@@ -4,4 +4,5 @@
     <string name="skill_calc">Skill Calculator</string>
     <string name="title_activity_stats_list_view">HiScores</string>
     <string name="title_activity_skill_calc">Skill Calculator</string>
+    <string name="back_to_main_activity_menu_item">Different Character</string>
 </resources>

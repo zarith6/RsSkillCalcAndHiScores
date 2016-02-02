@@ -58,8 +58,8 @@ public class RsExpXMLParser
     {
         parser.require(XmlPullParser.START_TAG, ns, "item");
         String name = null;
-        int XpAmt = 0;
-        boolean IsMembers = false;
+        float XpAmt = 0;
+        String category = "";
         int LvlReq = 0;
 
         while(parser.next() != XmlPullParser.END_TAG)
@@ -75,8 +75,8 @@ public class RsExpXMLParser
             else if(tag.equals("XpAmt")){
                 XpAmt = readXpAmt(parser);
             }
-            else if(tag.equals("Members")){
-                IsMembers = readMembers(parser);
+            else if(tag.equals("Category")){
+                category = readCategory(parser);
             }
             else if(tag.equals("LvlReq")){
                 LvlReq = readLvlReq(parser);
@@ -85,7 +85,7 @@ public class RsExpXMLParser
                 skip(parser);
             }
         }
-        return new SkillItem(name,XpAmt,IsMembers,LvlReq);
+        return new SkillItem(name,XpAmt,category,LvlReq);
     }
 
     private String readName(XmlPullParser parser) throws XmlPullParserException, IOException
@@ -96,20 +96,20 @@ public class RsExpXMLParser
         return name;
     }
 
-    private int readXpAmt(XmlPullParser parser) throws XmlPullParserException, IOException
+    private float readXpAmt(XmlPullParser parser) throws XmlPullParserException, IOException
     {
         parser.require(XmlPullParser.START_TAG, ns, "XpAmt");
-        int XpAmt = readInt(parser);
+        float XpAmt = readFloat(parser);
         parser.nextTag();
         parser.require(XmlPullParser.END_TAG, ns, "XpAmt");
         return XpAmt;
     }
 
-    private boolean readMembers(XmlPullParser parser) throws XmlPullParserException, IOException
+    private String readCategory(XmlPullParser parser) throws XmlPullParserException, IOException
     {
-        parser.require(XmlPullParser.START_TAG, ns, "Members");
-        boolean IsMembers = readBool(parser);
-        parser.require(XmlPullParser.END_TAG,ns,"Members");
+        parser.require(XmlPullParser.START_TAG, ns, "Category");
+        String IsMembers = readText(parser);
+        parser.require(XmlPullParser.END_TAG,ns,"Category");
         return IsMembers;
     }
 
@@ -158,6 +158,18 @@ public class RsExpXMLParser
             try{
                 result = Integer.valueOf(stringInt);
             } catch(Exception ex){}
+        }
+        return result;
+    }
+
+    private float readFloat(XmlPullParser parser) throws XmlPullParserException, IOException
+    {
+         float result = 0;
+        if(parser.next() == XmlPullParser.TEXT){
+            String stringFloat = parser.getText();
+            try{
+                result = Float.valueOf(stringFloat);
+            }catch(Exception ex){}
         }
         return result;
     }

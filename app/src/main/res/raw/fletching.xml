@@ -1,0 +1,14 @@
+<SkillItem>
+    <item>
+        <name>Arrow Shaft(Reg log)</name>
+        <XpAmt>5</XpAmt>
+        <Members>false</Members>
+        <LvlReq>1</LvlReq>
+    </item>
+    <item>
+        <name>Headless Arrow</name>
+        <XpAmt>1.3</XpAmt>
+        <Members>false</Members>
+        <LvlReq>1</LvlReq>
+    </item>
+</SkillItem>

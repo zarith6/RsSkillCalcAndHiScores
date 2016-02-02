@@ -67,6 +67,10 @@ public class StatsListViewActivity extends ListActivity {
             intent.putExtra("RSCharacter",chara);
             startActivity(intent);
         }
+        else if(id == R.id.action_backtomainactivity){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
