@@ -1,0 +1,303 @@
+package com.example.operator1.rsskillcalc;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Skill_Calc extends Activity {
+
+    Spinner skillSpinner;
+    TextView charNameTextBox;
+    RSChar tempChar;
+    TextView xpTextView;
+    TextView levelTextView;
+    EditText desiredSkillLevel;
+    TextView xpRequiredForLevelTextView;
+    TableLayout tabLayout;
+
+    int[] skillXpValues = {0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107, 2411, 2746, 3115, 3523, 3973, 4470, 5018,
+            5624, 6291, 7028, 7842, 8740, 9730, 10824, 12031, 13363, 14833, 16456, 18247, 20224, 22406, 24815, 27473, 30408, 33648, 37224, 41171, 45529,
+            50339, 55649, 61512, 67983, 75127, 83014, 91721, 101333, 111945, 123660, 134594, 150872, 166636, 184040, 203254, 224466, 247886, 273742, 302288, 333804, 367599,
+            407015, 449428, 496254, 547953, 605032, 668051, 737627, 814445, 899257, 992895, 1096278, 1210421, 1336443, 1475581, 1629200, 1798808, 1986068, 2192818, 2421087, 2673114,
+            2951373, 3258594, 3597792, 3972294, 4385776, 4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_skill_calc);
+        prepareSpinner();
+        xpTextView = (TextView)findViewById(R.id.selectedSkillXp);
+        levelTextView = (TextView)findViewById(R.id.selectedSkillLevel);
+
+        Bundle data = getIntent().getExtras();
+        tempChar = data.getParcelable("RSCharacter");
+
+        charNameTextBox = (TextView)findViewById(R.id.calcCharacterNameTextBox);
+        charNameTextBox.setText(tempChar.charactersName);
+
+        desiredSkillLevel = (EditText)findViewById(R.id.desiredSkillXp);
+        xpRequiredForLevelTextView = (TextView)findViewById(R.id.requiredXpForLevel);
+
+
+
+
+    }
+
+    public void submitXpButtonClicked(View view)
+    {
+        int levelWanted = Integer.valueOf(desiredSkillLevel.getText().toString());
+        int xpForWantedLevel = skillXpValues[levelWanted - 1];
+        int xpRequiredForUser = xpForWantedLevel - parser(xpTextView.getText().toString());
+        xpRequiredForLevelTextView.setText(String.valueOf(xpRequiredForUser));
+        generateTable(PullAndReportXML("fishingf2ptest"));
+    }
+
+    private int parser(String str)
+    {
+        StringBuilder sb = new StringBuilder();
+        String pattern = "\\d+";
+        Pattern r = Pattern.compile(pattern);
+        Matcher match = r.matcher(str);
+
+        while(match.find())
+        {
+            sb.append(match.group());
+        }
+        return Integer.valueOf(sb.toString());
+    }
+
+    private void prepareSpinner(){
+        skillSpinner = (Spinner)findViewById(R.id.skillsDropDownBox);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.skill_names, R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown);
+        skillSpinner.setAdapter(adapter);
+
+        skillSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            public void onItemSelected(AdapterView<?> arg0, View view, int position, long id) {
+                String skillName = skillSpinner.getSelectedItem().toString().trim();
+
+                switch (skillName) {
+                    case "Overall":
+                        xpTextView.setText("XP: " + tempChar.overallXp);
+                        levelTextView.setText("Level: " + tempChar.overallLevel);
+                        break;
+                    case "Attack":
+                        xpTextView.setText("XP: " + tempChar.attackXp);
+                        levelTextView.setText("Level: " + tempChar.attackLevel);
+                        break;
+                    case "Defence":
+                        xpTextView.setText("XP: " + tempChar.defenceXp);
+                        levelTextView.setText("Level: " + tempChar.defenceLevel);
+                        break;
+                    case "Strength":
+                        xpTextView.setText("XP: " + tempChar.strengthXp);
+                        levelTextView.setText("Level: " + tempChar.strengthLevel);
+                        break;
+                    case "Constitution":
+                        xpTextView.setText("XP: " + tempChar.constXp);
+                        levelTextView.setText("Level: " + tempChar.constLevel);
+                        break;
+                    case "Ranged":
+                        xpTextView.setText("XP: " + tempChar.rangedXp);
+                        levelTextView.setText("Level: " + tempChar.rangedLevel);
+                        break;
+                    case "Prayer":
+                        xpTextView.setText("XP: " + tempChar.prayerXp);
+                        levelTextView.setText("Level: " + tempChar.prayerLevel);
+                        break;
+                    case "Magic":
+                        xpTextView.setText("XP: " + tempChar.magicXp);
+                        levelTextView.setText("Level: " + tempChar.magicLevel);
+                        break;
+                    case "Cooking":
+                        xpTextView.setText("XP: " + tempChar.cookingXp);
+                        levelTextView.setText("Level: " + tempChar.cookingLevel);
+                        break;
+                    case "Woodcutting":
+                        xpTextView.setText("XP: " + tempChar.woodcuttingXp);
+                        levelTextView.setText("Level: " + tempChar.woodcuttingLevel);
+                        break;
+                    case "Fletching":
+                        xpTextView.setText("XP: " + tempChar.fletchingXp);
+                        levelTextView.setText("Level: " + tempChar.fletchingLevel);
+                        break;
+                    case "Fishing":
+                        xpTextView.setText("XP: " + tempChar.fishingXp);
+                        levelTextView.setText("Level: " + tempChar.fishingLevel);
+                        break;
+                    case "Firemaking":
+                        xpTextView.setText("XP: " + tempChar.firemakingXp);
+                        levelTextView.setText("Level: " + tempChar.firemakingLevel);
+                        break;
+                    case "Crafting":
+                        xpTextView.setText("XP: " + tempChar.craftingXp);
+                        levelTextView.setText("Level: " + tempChar.craftingLevel);
+                        break;
+                    case "Smithing":
+                        xpTextView.setText("XP: " + tempChar.smithingXp);
+                        levelTextView.setText("Level: " + tempChar.smithingLevel);
+                        break;
+                    case "Mining":
+                        xpTextView.setText("XP: " + tempChar.miningXp);
+                        levelTextView.setText("Level: " + tempChar.miningLevel);
+                        break;
+                    case "Herblore":
+                        xpTextView.setText("XP: " + tempChar.herbloreXp);
+                        levelTextView.setText("Level: " + tempChar.herbloreLevel);
+                        break;
+                    case "Agility":
+                        xpTextView.setText("XP: " + tempChar.agilityXp);
+                        levelTextView.setText("Level: " + tempChar.agilityLevel);
+                        break;
+                    case "Thieving":
+                        xpTextView.setText("XP: " + tempChar.thievingXp);
+                        levelTextView.setText("Level: " + tempChar.thievingLevel);
+                        break;
+                    case "Slayer":
+                        xpTextView.setText("XP: " + tempChar.slayerXp);
+                        levelTextView.setText("Level: " + tempChar.slayerLevel);
+                        break;
+                    case "Farming":
+                        xpTextView.setText("XP: " + tempChar.farmingXp);
+                        levelTextView.setText("Level: " + tempChar.farmingLevel);
+                        break;
+                    case "Runecrafting":
+                        xpTextView.setText("XP: " + tempChar.runecraftXp);
+                        levelTextView.setText("Level: " + tempChar.runecraftLevel);
+                        break;
+                    case "Hunter":
+                        xpTextView.setText("XP: " + tempChar.hunterXp);
+                        levelTextView.setText("Level: " + tempChar.hunterLevel);
+                        break;
+                    case "Construction":
+                        xpTextView.setText("XP: " + tempChar.constructionXp);
+                        levelTextView.setText("Level: " + tempChar.constructionLevel);
+                        break;
+                    case "Summoning":
+                        xpTextView.setText("XP: " + tempChar.summoningXp);
+                        levelTextView.setText("Level: " + tempChar.summoningLevel);
+                        break;
+                    case "Dungeoneering":
+                        xpTextView.setText("XP: " + tempChar.dungXp);
+                        levelTextView.setText("Level: " + tempChar.dungLevel);
+                        break;
+                    case "Divination":
+                        xpTextView.setText("XP: " + tempChar.divinationXp);
+                        levelTextView.setText("Level: " + tempChar.divinationLevel);
+                        break;
+                }
+
+
+            }
+
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+
+        });
+    }
+
+    public List PullAndReportXML(String skillName)
+    {
+        int resId = getResources().getIdentifier(skillName,"raw",getApplicationContext().getPackageName());
+        InputStream in = getResources().openRawResource(resId);
+        RsExpXMLParser rexp = new RsExpXMLParser();
+        List xpList = new ArrayList();
+        try {
+            xpList = rexp.parse(in);
+        }catch(Exception ex){}
+        return xpList;
+    }
+
+    public void generateTable(List xpList)
+    {
+
+        tabLayout = (TableLayout)findViewById(R.id.tableLayout);
+        tabLayout.removeAllViews();
+        TableRow guideRow = new TableRow(this);
+        guideRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+        TextView itemsName = new TextView(this);
+        itemsName.setTextColor(Color.WHITE);
+        itemsName.setText("Item");
+        TextView xpValue = new TextView(this);
+        xpValue.setText("XP");
+        xpValue.setTextColor(Color.WHITE);
+        TextView levelRequired= new TextView(this);
+        levelRequired.setText("Level");
+        levelRequired.setTextColor(Color.WHITE);
+        TextView amtRequired = new TextView(this);
+        amtRequired.setText("   #");
+        amtRequired.setTextColor(Color.WHITE);
+        guideRow.addView(itemsName);
+        guideRow.addView(xpValue);
+        guideRow.addView(levelRequired);
+        guideRow.addView(amtRequired);
+        tabLayout.addView(guideRow);
+
+
+        for(int i = 0; i < xpList.size(); i++)
+        {
+            TableRow tr = new TableRow(this);
+            tr.setPadding(3,3,3,3);
+            tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT ,TableRow.LayoutParams.WRAP_CONTENT));
+            SkillItem skill = (SkillItem)xpList.get(i);
+            String name = skill.name;
+            int xpVal = skill.XpAmt;
+            //boolean isMembers = skill.IsMembers;
+            int lvlReq = skill.LvlReq;
+            TextView itemName = new TextView(this);
+            itemName.setTextColor(Color.WHITE);
+            itemName.setText(name + "       ");
+            TextView xpValtv = new TextView(this);
+            xpValtv.setTextColor(Color.WHITE);
+            xpValtv.setText(String.valueOf(xpVal) + "       ");
+            TextView levelreq = new TextView(this);
+            levelreq.setTextColor(Color.WHITE);
+            levelreq.setText(String.valueOf(lvlReq + "      "));
+            TextView numItemsReq = new TextView(this);
+            numItemsReq.setTextColor(Color.WHITE);
+            numItemsReq.setText(String.valueOf(generateRequiredAmtOfItems(xpVal)));
+            tr.addView(itemName);
+            tr.addView(xpValtv);
+            tr.addView(levelreq);
+            tr.addView(numItemsReq);
+            tabLayout.addView(tr);
+        }
+
+    }
+
+    public int generateRequiredAmtOfItems(int skillExp)
+    {
+        int xpRequired = 0;
+        int xpAlreadyHad;
+        int wantedLevel;
+
+        try
+        {
+            if(!xpTextView.getText().toString().equals("")) {
+                wantedLevel = Integer.valueOf(desiredSkillLevel.getText().toString());
+                xpAlreadyHad = Integer.valueOf(parser(xpTextView.getText().toString()));
+                xpRequired = skillXpValues[wantedLevel - 1] - xpAlreadyHad;
+            } else {Toast t = Toast.makeText(this,"Please enter your desired level.", Toast.LENGTH_SHORT); t.show(); }
+        } catch(Exception ex){}
+
+        return xpRequired / skillExp;
+    }
+
+}
